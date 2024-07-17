@@ -1,0 +1,515 @@
+:root{
+    /* font-family */
+    --font-family: 'Poppins', sans-serif;
+
+    /* font-size */
+    --fs-1: 32px;
+    --fs-2: 26px;
+    --fs-3: 22px;
+    --fs-4: 18px;
+    --fs-5: 15px;
+    --fs-6: 13px;
+    --fs-7: 12px;
+    --fs-8: 10px;
+
+    /* font-weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+
+    /* Colores */
+    --background: #f5f5ef;
+    --white: #ffff;
+    --navbar-text: #0d1216;
+    --second-color: #b7865e;
+    --text-color: #a1a49b;
+}
+
+html{
+    font-family: var(--font-family);
+    background-color: var(--background);
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    max-width: 100%;
+    width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    font: inherit;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+
+p{
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+footer{
+    background: var(--white);
+    padding: 1px;
+}
+
+.inactive{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+article{
+    display: none;
+}
+
+article.active{
+    display: block;
+}
+
+.h1{
+    font-size: var(--fs-1);
+    color: var(--second-color);
+}
+
+.h2-contacto{
+    font-size: var(--fs-3);
+    color: var(--second-color);
+}
+
+/* Menu */
+
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: var(--white);
+}
+
+.navbar-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+
+.navbar-list:last-child{
+    color: white;
+}
+
+.navbar-link{
+    color: var(--navbar-text);
+    font-size: var(--fs-5);
+    padding: 10px 7px;
+    font-weight: var(--fw-600);
+}
+
+.navbar-link.active{
+    color: var(--second-color);
+}
+
+.navbar-link-second{
+    color: var(--white);
+}
+
+/* header */
+.header{
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(65%)
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.header-text p {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0;
+}
+/* Sobre nosotros */
+
+.sobre-nosotros{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7rem;
+}
+
+.info-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-end;
+    padding: 0;
+}
+
+.img{
+    width: 80%;
+}
+
+.img1{
+    position: relative;
+    bottom: 80px;
+}
+
+.img2{
+    position: relative;
+    top: 80px;
+}
+
+.info-text{
+    width: 70%;
+    font-size: var(--fs-3);
+}
+
+.button{
+    background-color: var(--second-color);
+    padding: 10px;
+    color: var(--white);
+    font-weight: var(--fw-600);
+}
+
+/* Nuestras Certificaciones */
+
+.certificaciones{
+    background: var(--second-color);
+    margin-top: 7rem;
+}
+
+.certifications{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.h2{
+    color: var(--white);
+}
+
+.info-text2{
+    width: 70%;
+    font-size: var(--fs-3);
+}
+
+.info-text-certifications{
+    color: var(--white);
+}
+
+.info_more-btn span{
+    color: var(--second-color);
+    padding: 10px;
+}
+
+.list-certifications{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.logo{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.img-certifications-2{
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+}
+
+.list-certifications-2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: end;
+    gap: 30px;
+}
+
+.img-certifications-3{
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+    justify-items: end;
+}
+
+.list-certifications-3{
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    grid-template-columns: repeat(3, 0fr);
+}
+
+/* Destinos Disney */
+/* header */
+.header-disney{
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    overflow: hidden;
+}
+
+.header-disney img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(65%)
+}
+
+.header-text-disney {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.header-text-disney h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.header-text-disney p {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* destinos disney */
+/* navbar disney */
+
+.navbar-disney{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 4rem;
+}
+
+.navbar-disney-text{
+    width: 60%;
+    font-size: var(--fs-3);
+}
+
+.navbar-disney-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    font-size: var(--fs-4);
+}
+
+.disney-img img{
+    width: 70%;
+    border-radius: 15px;
+    
+}
+
+.disney-img a{
+    font-weight: var(--fw-500);
+    font-size: var(--fs-3);
+    color: var(--second-color);
+}
+
+.disney-img-2 a{
+    font-weight: var(--fw-500);
+    font-size: var(--fs-3);
+    color: var(--second-color);
+}
+
+.img-cruise{
+    width: 78%;
+    border-radius: 15px;
+}
+
+.img-cruise-2{
+    width: 58%;
+    border-radius: 15px;
+}
+
+/* Walt Disney World */
+.walt-disney-world{
+    margin-top: 4rem;
+    background: var(--second-color);
+}
+
+.walt-title{
+    font-size: var(--fs-1);
+    color: var(--white);
+}
+
+.btn-cotizacion{
+    background-color: var(--background);
+    padding: 10px;
+}
+
+.btn-cotizacion.btn-cotizacion-text{
+    color: var(--second-color);
+}
+
+.walt-disney-grid{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 4rem;
+}
+
+.walt-text{
+    width: 85%;
+}
+
+.walt-text p{
+    color: var(--white);
+    font-size: var(--fs-4);
+}
+
+.info_more-btn{
+    background: var(--background);
+    font-size: var(--fs-4);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.walt-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+}
+
+.container-img{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 19rem;  /* Ajusta el ancho según tus necesidades */
+    height: 30rem;  /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.container-img-2{
+    border-radius: 30px;
+}
+
+/* Disney Cruise Line */
+
+.disney-cruise-grid{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 4rem;
+}
+
+.cruise-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+}
+
+.cruise-title{
+    color: var(--second-color);
+}
+
+.cruise-text p{
+    color: var(--text-color);
+    font-size: var(--fs-4);
+}
+
+.cruise-text{
+    width: 90%;
+}
+
+.info_more-btn-cruise{
+    background: var(--second-color);
+    border-radius: 10px;
+    font-size: var(--fs-4);
+    padding: 10px;
+}
+
+.info_more-btn-cruise a{
+    color: var(--white);
+    padding: 10px;
+}
+
+.maya{
+    translate: 160px;
+}
+
+/* Contactarnos */
+.contactarnos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+}
+
+.contactanos-img{
+    width: 50%;
+}
+
+.contactanos-text{
+    width: 80%;
+}
+
+.img-contacto{
+    width: 100%;
+}
+
+/* Footer */
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.icon-social{
+    padding: 15px;
+}
+
+.aviso-privacidad{
+    color: var(--text-color);
+}
