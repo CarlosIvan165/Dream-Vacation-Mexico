@@ -559,20 +559,24 @@ article.active{
     }
 
 /* Disney */
+/* Destinos Disney */
+    .navbar-disney{
+        grid-template-columns: 1fr;
+    }
 
     .navbar-disney-img{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         font-size: var(--fs-4);
+        margin: 20px;
     }
 
-    .walt-img{
-        gap: 20px;
+    .disney-img, .disney-img-2{
+        display: grid;
+        justify-items: center;
     }
 
-    .cruise-img{
-        gap: 20px;
-    }
+
 }
 
 @media (max-width: 910px){
