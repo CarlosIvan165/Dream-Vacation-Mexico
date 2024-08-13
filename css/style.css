@@ -37,7 +37,10 @@ body{
 
 main{
     max-width: 100%;
-    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 
 li{
@@ -210,6 +213,46 @@ article.active{
 
 /* Nuestras Certificaciones */
 
+.clients{
+    padding: 30px;
+}
+
+.clients-list{
+    display: flex;
+    gap: 25px;
+    scroll-padding-inline: 45px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 150%;
+}
+
+.logo-carousel{
+    width: 30rem;
+}
+
+.div-list{
+    overflow-x: auto;
+}
+
+.div-list::-webkit-scrollbar {
+    width: 5px; /* for vertical scrollbar */
+    height: 5px; /* for horizontal scrollbar */
+  }
+  
+.div-list::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 5px;
+}
+  
+.div-list::-webkit-scrollbar-thumb {
+    background: var(--text-color);
+    border-radius: 5px;
+}
+
+.clients-list .has-scrollbar::-webkit-scrollbar-button { 
+    width: 20px; 
+}
+
 .certificaciones{
     background: var(--second-color);
     margin-top: 7rem;
@@ -254,7 +297,7 @@ article.active{
 
 .img-certifications-2{
     display: grid;
-    margin-top: 5rem;
+    margin-top: 1rem;
     grid-template-columns: 3fr 2fr;
     align-items: center;
 }
@@ -512,4 +555,27 @@ article.active{
 
 .aviso-privacidad{
     color: var(--text-color);
+}
+
+@media (max-width: 1250px){
+    .certifications{
+        grid-template-columns: 1fr;
+    }
+
+    .list-certifications-2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .img-certifications-2{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 910px){
+    .certifications{
+        grid-template-columns: 1fr;
+    }
 }
