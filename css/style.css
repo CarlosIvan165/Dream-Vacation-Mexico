@@ -227,11 +227,15 @@ article.active{
 }
 
 .logo-carousel{
-    width: 30rem;
+    width: 25rem;
 }
 
 .div-list{
     overflow-x: auto;
+}
+
+.sep{
+    margin-top: 3rem;
 }
 
 .div-list::-webkit-scrollbar {
@@ -293,35 +297,6 @@ article.active{
     width: 400px;
     height: 300px;
     border-radius: 10px;
-}
-
-.img-certifications-2{
-    display: grid;
-    margin-top: 1rem;
-    grid-template-columns: 3fr 2fr;
-    align-items: center;
-}
-
-.list-certifications-2{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    justify-items: end;
-    gap: 30px;
-}
-
-.img-certifications-3{
-    display: grid;
-    margin-top: 5rem;
-    grid-template-columns: 6fr 1fr;
-    align-items: center;
-    justify-items: end;
-}
-
-.list-certifications-3{
-    display: grid;
-    justify-items: center;
-    gap: 30px;
-    grid-template-columns: repeat(3, 0fr);
 }
 
 /* Destinos Disney */
@@ -572,10 +547,42 @@ article.active{
     .img-certifications-2{
         grid-template-columns: 1fr;
     }
+
+    .logo-carousel{
+        width: 20rem;
+    }
+
+    .logo{
+        width: 350px;
+        height: 250px;
+        border-radius: 10px;
+    }
+
+/* Disney */
+
+    .navbar-disney-img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: var(--fs-4);
+    }
+
+    .walt-img{
+        gap: 20px;
+    }
+
+    .cruise-img{
+        gap: 20px;
+    }
 }
 
 @media (max-width: 910px){
     .certifications{
         grid-template-columns: 1fr;
+    }
+
+    .logo{
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
     }
 }

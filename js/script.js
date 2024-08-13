@@ -6,37 +6,49 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 function iniciarApp(){
-    crearGaleria('certifications-michelle', 8, );
+    crearGaleria('certifications-sasha', 9);
+    crearGaleria2('certifications-michelle', 8);
     /* agregarEventosDeFiltro(); */
 }
 
-//Galeria para portafolio
-function crearGaleria(categoria, cantidad, puesto) {
+function crearGaleria(categoria, cantidad) {
     const galeria = document.querySelector(`.galeria-imagenes`);
     
     for(let i = 1; i <= cantidad; i++){
         const imagen = document.createElement('li');
-        imagen.classList.add('project-item');
-        imagen.classList.add('active');
+        imagen.classList.add('clients-item');
+        imagen.classList.add('has-scrollbar');
         imagen.dataset.filterItem ='';
         imagen.dataset.category = categoria.toLowerCase();
         imagen.innerHTML = `
-            <a class="project-box" href="#">
-                <figure class="project-img">
-                    <div class="project-item-icon-box">
-                        <ion-icon name="eye-outline" role="img" class="md hydrated" aria-label="eye outline"></ion-icon>
-                    </div>
-                    <img loading="lazy" class="img-thumb" src="img/${categoria = "certifications-michelle"}/${i}.png" alt="imagen galeria">
-                </figure>
-                <h3 class="project-title">${categoria}</h3>
+            <a href="#">
+                <img loading="lazy" class="logo-carousel" src="img/${categoria}/${i}.png" alt="imagen galeria">
             </a>
         `;
-        
-        imagen.onclick = function() {
-            mostrarImagen(categoria, i);
-        };
 
-        /* galeria.appendChild(imagen); */
+        galeria.appendChild(imagen);
+    }
+
+    // Redefinir filterItems después de crear las imágenes
+    /* agregarEventosDeFiltro(); */
+}
+
+function crearGaleria2(categoria, cantidad) {
+    const galeria2 = document.querySelector(`.galeria-imagenes2`);
+    
+    for(let i = 1; i <= cantidad; i++){
+        const imagen = document.createElement('li');
+        imagen.classList.add('clients-item');
+        imagen.classList.add('has-scrollbar');
+        imagen.dataset.filterItem ='';
+        imagen.dataset.category = categoria.toLowerCase();
+        imagen.innerHTML = `
+            <a href="#">
+                <img loading="lazy" class="logo-carousel" src="img/${categoria}/${i}.png" alt="imagen galeria">
+            </a>
+        `;
+
+        galeria2.appendChild(imagen);
     }
 
     // Redefinir filterItems después de crear las imágenes
