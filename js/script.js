@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 function iniciarApp(){
-    crearGaleria('certifications-sasha', 9);
-    crearGaleria2('certifications-michelle', 8);
+    crearGaleria('certifications-sasha', 11);
+    crearGaleria2('certifications-michelle', 10);
     /* agregarEventosDeFiltro(); */
 }
 

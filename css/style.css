@@ -218,7 +218,8 @@ article.active{
 }
 
 .clients-list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 25px;
     scroll-padding-inline: 45px;
     justify-content: flex-start;
@@ -264,7 +265,7 @@ article.active{
 
 .certifications{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
     justify-items: center;
     align-items: center;
 }
@@ -427,6 +428,7 @@ article.active{
     font-size: var(--fs-4);
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 1rem;
 }
 
 .walt-img{
@@ -576,14 +578,17 @@ article.active{
         justify-items: center;
     }
 
+    .walt-disney-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .disney-cruise-grid{
+        grid-template-columns: 1fr;
+    }
 
 }
 
 @media (max-width: 910px){
-    .certifications{
-        grid-template-columns: 1fr;
-    }
-
     .logo{
         width: 300px;
         height: 200px;
